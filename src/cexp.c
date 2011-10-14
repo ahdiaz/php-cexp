@@ -1,3 +1,29 @@
+/**
+ * This file is part of php-cexp module.
+ *
+ * This software is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+ *
+ * As a special exception, if you link this library with other files to
+ * produce an executable, this library does not by itself cause the
+ * resulting executable to be covered by the GNU General Public License.
+ * This exception does not however invalidate any other reasons why the
+ * executable file might be covered by the GNU General Public License.
+ *
+ * Author: Antonio Hernández <mailto:ahdiaz@gmail.com>
+ */
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -66,7 +92,7 @@ PHP_FUNCTION(ifempty) {
 		case IS_NULL:
 			*return_value = *empty_value;
 			break;
-			
+
 		case IS_STRING:
 			if (Z_STRLEN_P(value) == 0) {
 				*return_value = *empty_value;
@@ -74,7 +100,7 @@ PHP_FUNCTION(ifempty) {
 				*return_value = *value;
 			}
 			break;
-			
+
 		case IS_BOOL:
 			if (Z_BVAL_P(value) == 0) {
 				*return_value = *empty_value;
@@ -82,7 +108,7 @@ PHP_FUNCTION(ifempty) {
 				*return_value = *value;
 			}
 			break;
-			
+
 		case IS_LONG:
 		case IS_DOUBLE:
 			if (Z_LVAL_P(value) == 0) {
@@ -91,7 +117,7 @@ PHP_FUNCTION(ifempty) {
 				*return_value = *value;
 			}
 			break;
-			
+
 		default:
 			*return_value = *value;
 	}
