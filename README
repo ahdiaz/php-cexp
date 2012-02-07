@@ -25,6 +25,28 @@ mixed ifempty ( mixed $value, mixed $value_if_empty );
     Consider EMPTY as the value returned by the PHP function empty().
 
 
+These functions are a replacement for common patterns like the following:
+
+    if (is_null($value)) {
+        return $value_if_null;
+    } else {
+        return $value;
+    }
+
+    ...
+
+    $ret = empty($value) ? $value_if_empty : $value;
+
+
+The following expressions are shorter and (maybe) clearer:
+
+    return ifnull($value, $value_if_null);
+
+    ...
+
+    $ret = ifempty($value, $value_if_empty);
+
+
 Building and installing
 =======================
 
