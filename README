@@ -1,6 +1,8 @@
 cexp 0.1
 ========
 
+Author: Antonio Hernández <ahdiaz@gmail.com>
+
 This is a very simple PHP module that implements a couple of useful functions (IMHO).
 These are ifnull() and ifempty(), copying funcionality from the MySQL equivalent ones.
 
