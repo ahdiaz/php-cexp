@@ -27,7 +27,7 @@ Building and installing
 Run this commands from the root directory:
 
 $ phpize
-$ ./configure --enable-hello
+$ ./configure --enable-cexp
 $ make
 
 Installing is just like this:
@@ -38,4 +38,9 @@ $ make install
 Testing
 =======
 
-Run the PHP script found in test directory.
+Run the following command under the test directory:
+
+$ php -c tmp-php.ini -f test.php
+
+Or just run the test.sh script, it does the same.
+
