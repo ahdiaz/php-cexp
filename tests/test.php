@@ -1,5 +1,7 @@
 <?php
 
+dl(../php_cexp.so);
+
 function test_ifnull($value, $null_value) {
 	$r = ifnull($value, $null_value);
 	var_dump($value);
