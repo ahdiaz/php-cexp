@@ -15,14 +15,14 @@ mixed ifnull ( mixed $value, mixed $value_if_null );
     Test the expression $value, if it is NULL then returns the value of
     $value_if_null, if it is NOT NULL returns the value $value.
 
-    Consider NULL as the value returned by the PHP function is_null().
+    Consider NULL as the value evaluated by the PHP function is_null().
 
 mixed ifempty ( mixed $value, mixed $value_if_empty );
 
     Test the expression $value, if it is EMPTY then returns the value of
     $value_if_empty, if it is NOT EMPTY returns the value $value.
 
-    Consider EMPTY as the value returned by the PHP function empty().
+    Consider EMPTY as the value evaluated by the PHP function empty().
 
 
 These functions are a replacement for common patterns like the following:
